@@ -1,0 +1,397 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap');
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat";
+}
+
+a, button, input, input[type='text'], textarea {
+  display: inline-block;
+  min-width: 44px;
+  min-height: 44px;
+}
+
+/* Skip-link */
+
+.skip-link {
+	position: absolute;
+	top: -45px;
+	left: 0;
+  background-color: #405F8D;
+	color: white;
+	padding: 10px;
+  border-radius: 5px;
+	font-size: 15px;
+	z-index: 100;
+	text-decoration: none
+}
+.skip-link:focus {
+	top: 0;
+}
+
+/* Navbar */
+
+.navbar {
+  width: 100%;
+  margin-inline: auto;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: white;
+  top: 0;
+  gap: 50%;
+
+  padding-block: 1rem;
+  z-index: 999;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logo img{
+  width: 60px;
+  border-radius: 50px;
+}
+
+.logo a{
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 30px;
+  text-align: center;
+  margin-top: 10px;
+  color: black;
+  letter-spacing: 2.5px;
+}
+
+
+nav ul {
+  padding: auto;
+  display: flex;
+  gap: 2rem 1rem;
+}
+
+nav li {
+  list-style-type: none;
+}
+
+nav li a {
+  text-decoration: none;
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: black;
+  padding: .5rem 1.5rem;
+}
+
+/* Toggle/Hamburger */
+
+.hamburger{
+  display: none;
+  background-color: white;
+  border: 0px;
+  width: 44px;
+  height: 44px;
+}
+.hamburger div {
+  width: 34px;
+  height: 5px;
+  background-color: #405F8D;
+  border-radius: 5px;
+  margin: 5px;
+  transition: all 0.3s ease;
+}
+
+
+/***Toggle Line Burger***/
+.toggle .line1 {
+  transform: rotateZ(-405deg) translate(-8px, 6px);
+}
+
+.toggle .line2 {
+  opacity: 0;
+}
+
+.toggle .line3 {
+  transform: rotateZ(405deg) translate(-8px, -6px);
+}
+
+
+
+/***Keyframe Animation Slider***/
+@keyframes navLinkFade{
+  from{
+      opacity: 0;
+      transform: translateX(50px);
+  }
+  to{
+      opacity: 1;
+      transform: translateX(0px);
+  }
+}
+
+/* Hero/Jumbotron */
+
+.hero {
+  align-items: center;
+  min-height: 500px;
+  min-width: 1000px;
+  padding: 200px;
+  background: url("../public/images/heros/hero-image_large.jpg"), linear-gradient(0deg, rgba(0, 0, 0, 0.50) 100%, rgba(0, 0, 0, 0.50) 0%), lightgray 50%/ cover no-repeat;
+  background-position: bottom;
+  object-fit: fill;
+  color: white;
+}
+
+.hero p {
+  font-size: 2.5rem;
+  font-weight: 500px;
+}
+
+.hero h1 {
+  font-size: 4rem;
+  margin-block: 1rem;
+}
+
+
+/* Latest */
+
+.latest {
+  text-align: center;
+}
+
+.latest-label {
+  color: black;
+  font-size: 18px;
+  font-weight: bolder;
+  letter-spacing: 1.5px;
+  padding: 20px;
+  border: dotted 2px rgba(0, 0, 0, 0.034);
+  border-width: 50%;
+}
+
+.latest-label::after {
+  content: '';
+  margin-top: 16px;
+  display: block;
+  border-bottom: 3px solid rgba(0, 0, 0, 0.034);
+}
+
+
+/*** Post ***/
+main {
+  width: 100%;
+  min-height: 100vh;
+  margin: auto;
+  max-width: 1300px;
+}
+
+.post {
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+}
+
+/*** Post Item ***/
+
+.card {
+  margin: 20px;
+  width: 30%;
+  height: auto;
+  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  background-color: white;
+  border: solid rgba(107, 103, 103, 0.185) 1px;
+}
+
+.content {
+  padding: 20px;
+}
+
+/* Post Location */
+
+.location {
+  position: absolute;
+  color: #405F8D;
+  margin-top: 8px;
+  margin-left: 8px;
+  padding: 6px;
+
+  font-weight: 500;
+  font-size: 14px;
+  background-color: white;
+  border-radius: 6px;
+}
+
+.card .thumbnail {
+  width: 100%;
+  padding: 11px;
+  border-radius: 20px 20px 0px 0px;
+  height: 200px;
+}
+
+.rating {
+  font-weight: 500;
+  font-size: 13px;
+  color: white;
+  background-color: #405F8D;
+  max-width: 103px;
+  padding: 5px;
+  border-radius: 5px;
+  text-align: left;
+  margin-top: -10px;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 20px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.card .description {
+  margin-top: 10px ;
+  font-size: 12px;
+  line-height: 1.5em;
+  text-align: justify;
+}
+
+.detail-a {
+  margin-top: 20px;
+  padding: 14px 20px;
+  background-color: #405F8D;
+  color: #fff;
+  text-decoration: none;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.detail-a:hover {
+  background-color: white;
+  color: #405F8D;
+  outline: 1px solid #405F8D;
+}
+
+.restaurants {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Footer */
+
+footer{
+  margin-top: 20px;
+  padding: 20px;
+  width: 100%;
+  color: white;
+  background-color: #405F8D;
+  text-align: center;
+  font-weight: bold;
+}
+
+.restaurant-empty {
+  align-items: center;
+  padding: 50px;
+}
+
+/* detail */
+.detail_item {
+  padding: 10px;
+  display: flex;
+  flex: 2 1;
+}
+.detail_header {
+  padding-top: 100px;
+}
+.detail_info {
+  padding: 20px;
+  margin: 10px;
+  gap: 1rem;
+  text-align: justify;
+}
+.detail_info h3 {
+  font-size: 26px;
+}
+.detail_info h4 {
+  margin-top: 10px;
+  gap: 1rem;
+}
+.detail_info p {
+  margin-top: 5px;
+}
+.detail_name {
+  letter-spacing: 2px;
+  font-weight: 600;
+  padding-top: 10px;
+  padding-bottom: 30px;
+  font-size: 30px;
+  text-align: center;
+}
+.detail_poster {
+  border-radius: 20px;
+  width: 50%;
+  height: 30%;
+  display: flex;
+  align-self: center;
+}
+.detail_review {
+  background-color: #405F8D;
+  border-radius: 20px;
+  margin-top: 10px;
+  padding: 10px;
+}
+.detail_review h3 {
+  color: white;
+  padding: 10px;
+}
+
+.detail_review_item {
+  background-color: white;
+  border-radius: 20px;
+  padding: 20px;
+  margin: 10px;
+}
+.detail_review_item h4 {
+  margin-top: 10px;
+}
+.detail_description {
+  text-align: justify;
+  padding: 10px;
+  margin: 10px;
+  line-height: 25px;
+}
+
+.content__heading {
+  text-align: center;
+}
+
+/* like */
+
+.like {
+  width: 55px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #405F8D;
+  
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  border-radius: 50%;
+  border: 0;
+  
+  margin-right: 20px;
+  margin-bottom: 30px;
+
+  font-size: 18px;
+  color: white;
+  cursor: pointer;
+}
